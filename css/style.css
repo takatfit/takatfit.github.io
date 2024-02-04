@@ -28,7 +28,7 @@ img{
 }
 
 .section{
-	background:#FFF;
+	background:#252525;
 	position:relative;
 	z-index:9;
 }
@@ -91,6 +91,7 @@ p{
 	display:table-cell;
 	vertical-align:middle;
 }
+
 
 
 .col-section-header > h2{
