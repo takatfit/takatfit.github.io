@@ -874,7 +874,7 @@ section {
 
 .hero-section,
 .hero-section>.container>.row {
-  height: 100vh;
+  height: 120vh;
   min-height: 880px;
 }
 
