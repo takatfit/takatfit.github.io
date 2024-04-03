@@ -151,6 +151,16 @@ p {
 }
 
 @media (max-width: 768px) {
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr auto 1fr;
+        grid-template-rows: auto auto auto;
+        grid-gap: 0px;
+        padding: 0px;
+        margin-top: -700px; 
+    }
+    
     h2 {
         font-size: 16px;
     }
