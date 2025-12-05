@@ -105,7 +105,7 @@
         <div class="container mx-auto px-6 py-4 h-auto flex justify-between items-center">
             <a href="#" class="flex items-center gap-3">
                 <!-- Logo size increased to h-16 (64px) -->
-                <img src="https://takatfit.github.io/assets/logo1.png" alt="Takat Fitness Logo" class="h-16 w-auto">
+                <img src="./assets/logo1.png" alt="Takat Fitness Logo" class="h-16 w-auto">
             </a>
             <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-400">
                 <a href="#features" class="hover:text-white transition">Features</a>
@@ -155,7 +155,7 @@
             <div class="relative flex justify-center h-[680px]" data-aos="fade-left">
                 <div class="iphone-frame animate-float">
                     <div class="dynamic-island"></div>
-                    <img src="https://takatfit.github.io/assets/homescreen.png" alt="Takat App Dashboard" class="screen-image">
+                    <img src="./assets/homescreen.png" alt="Takat App Dashboard" class="screen-image">
                 </div>
                 <!-- Shadow -->
                 <div class="absolute bottom-0 w-48 h-12 bg-blue-500/20 rounded-full blur-2xl"></div>
@@ -177,107 +177,189 @@
         </div>
     </div>
 
-    <!-- Feature 1: Analytics (Mirrors App) -->
-    <section id="features" class="py-32 bg-[#05050b] relative">
-        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center">
-            
-            <!-- Image Side -->
-            <div class="order-2 md:order-1 relative" data-aos="fade-up">
-                <div class="absolute inset-0 bg-yellow-500/10 blur-[80px] rounded-full"></div>
-                <div class="static-phone">
-                    <!-- Using placeholder image for now, replace with actual screenshot -->
-                    <img src="https://placehold.co/400x850/080810/ffffff?text=Analytics+Screen" alt="Takat Analytics Screen" class="w-full h-full object-cover">
+    <!-- Feature 1: Scrollytelling Analytics -->
+    <section id="features" class="relative bg-[#05050b]">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row">
+                
+                <!-- Left: Sticky Phone Wrapper -->
+                <div class="lg:w-1/2 relative">
+                    <!-- Sticky container keeps the phone in view while right side scrolls -->
+                    <div class="sticky top-0 h-screen flex items-center justify-center py-20 overflow-hidden">
+                        <div class="absolute inset-0 bg-yellow-500/5 blur-[120px] rounded-full pointer-events-none"></div>
+                        <div class="static-phone z-10">
+                            <!-- Inner Container for Sliding Image -->
+                            <div class="w-full h-full bg-[#080810] relative overflow-hidden">
+                                <!-- Dynamic Island -->
+                                <div class="dynamic-island z-20" style="top: 14px;"></div>
+                                <!-- Tall Scrolling Image -->
+                                <img 
+                                    id="phone-scroll-image"
+                                    src="./assets/app_screen.png" 
+                                    alt="Long Scrollable App UI" 
+                                    class="w-full absolute top-0 left-0 transition-transform duration-100 ease-out will-change-transform"
+                                    style="height: auto; min-height: 200%;"
+                                >
+                                <!-- Gradient Overlay at bottom for fade effect -->
+                                <div class="absolute bottom-0 w-full h-24 bg-gradient-to-t from-[#080810] to-transparent z-10 pointer-events-none"></div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
 
-            <!-- Text Side -->
-            <div class="order-1 md:order-2" data-aos="fade-up" data-aos-delay="100">
-                <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center text-yellow-500 mb-8 border border-yellow-500/20">
-                    <i class="fa-solid fa-chart-pie text-2xl"></i>
-                </div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Fuel Your Body <br> The Right Way.</h2>
-                <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                    Comprehensive nutritional tracking at your fingertips. Set calorie intake goals and effortlessly track your daily food consumption to ensure you are fueling your gains correctly.
-                </p>
-                <div class="grid grid-cols-2 gap-6">
-                    <div class="p-4 rounded-xl bg-white/5 border border-white/5">
-                        <div class="text-2xl font-bold text-white mb-1">Scanner</div>
-                        <div class="text-sm text-gray-500">Scan barcodes instantly</div>
+                <!-- Right: Scrolling Content Blocks -->
+                <div class="lg:w-1/2 relative z-10">
+                    
+                    <!-- Step 1 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-8 border border-blue-500/20">
+                            <i class="fa-solid fa-calendar-check text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Dominate Your Week</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            See what's planned and smash your goals. Create a new plan or follow a pre-built one to stay on track.
+                        </p>
                     </div>
-                    <div class="p-4 rounded-xl bg-white/5 border border-white/5">
-                        <div class="text-2xl font-bold text-white mb-1">History</div>
-                        <div class="text-sm text-gray-500">View weekly trends</div>
+
+                    <!-- Step 2 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 flex items-center justify-center text-yellow-500 mb-8 border border-yellow-500/20">
+                            <i class="fa-solid fa-chart-pie text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Master Your Macros</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Go beyond basic calorie counting. Fine-tune your nutrition with our built-in macro tracker to fuel your performance perfectly.
+                        </p>
                     </div>
+
+                    <!-- Step 3 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-green-500/10 flex items-center justify-center text-green-500 mb-8 border border-green-500/20">
+                            <i class="fa-solid fa-stopwatch text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Connect Your Smartwatch</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Ditch manual logging. Enjoy automatic data import from your smartwatch to save time and ensure accuracy in tracking.
+                        </p>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-red-500/10 flex items-center justify-center text-red-500 mb-8 border border-red-500/20">
+                            <i class="fa-solid fa-dumbbell text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Workout Your Way</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Dive into our massive library of workouts or build your own custom routines with our intuitive builder tool.
+                        </p>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-purple-500/10 flex items-center justify-center text-purple-500 mb-8 border border-purple-500/20">
+                            <i class="fa-solid fa-person-praying text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Explore Diverse Options</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Unleash your inner yogi, discover the power of meditation, or get moving with our extensive library of home workouts and calisthenics.
+                        </p>
+                    </div>
+
+                    <!-- Step 6 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-pink-500/10 flex items-center justify-center text-pink-500 mb-8 border border-pink-500/20">
+                            <i class="fa-solid fa-calculator text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Level Up Your Fitness</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Unlock insights with our BMI, calorie, and macro calculators. Optimize your workouts and fuel your body for success.
+                        </p>
+                    </div>
+
+                    <!-- Step 7 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-orange-500/10 flex items-center justify-center text-orange-500 mb-8 border border-orange-500/20">
+                            <i class="fa-solid fa-fire text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Unleash Your Potential</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Find the perfect workout for any goal with 3,000+ exercises. Target specific muscle groups and explore equipment-based routines.
+                        </p>
+                    </div>
+
+                    <!-- Step 8 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-teal-500/10 flex items-center justify-center text-teal-500 mb-8 border border-teal-500/20">
+                            <i class="fa-solid fa-heart-pulse text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Embrace a Healthy Lifestyle</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Takat Fitness goes beyond workouts. Discover valuable tips on sleep, stress management, and healthy habits.
+                        </p>
+                    </div>
+
+                    <!-- Step 9 -->
+                    <div class="min-h-[80vh] flex flex-col justify-center p-8 lg:pl-20" data-aos="fade-up">
+                        <div class="w-14 h-14 rounded-2xl bg-indigo-500/10 flex items-center justify-center text-indigo-500 mb-8 border border-indigo-500/20">
+                            <i class="fa-solid fa-map-location-dot text-2xl"></i>
+                        </div>
+                        <h2 class="text-3xl md:text-4xl font-bold mb-6 text-white">Train Anywhere, Anytime</h2>
+                        <p class="text-gray-400 text-lg mb-8 leading-relaxed">
+                            Don't let equipment limitations hold you back. Find effective workouts based on what you have—at home, the gym, or outdoors.
+                        </p>
+                    </div>
+
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Feature 2: Workouts -->
+    <!-- Feature 2: Exact Equipment USP -->
     <section id="how-it-works" class="py-32 bg-[#080810] border-y border-white/5 relative overflow-hidden">
         <div class="container mx-auto px-6 grid md:grid-cols-2 gap-20 items-center relative z-10">
             <!-- Content -->
             <div data-aos="fade-up">
                 <div class="w-14 h-14 rounded-2xl bg-blue-500/10 flex items-center justify-center text-blue-500 mb-8 border border-blue-500/20">
-                    <i class="fa-solid fa-person-running text-2xl"></i>
+                    <i class="fa-solid fa-sliders text-2xl"></i>
                 </div>
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Hyper-Personalized <br> Workout Plans.</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Your Gear. <br> Your Workout.</h2>
                 <p class="text-gray-400 text-lg mb-8 leading-relaxed">
-                    This is our game-changer. Whether you have a single dumbbell or a full commercial gym, we instantly generate the exercises you can truly do.
+                    Unlock the full potential of your environment. By selecting your specific equipment inventory—down to individual attachments and weights—Takat instantly curates a viable training plan from our massive <strong>5,000+ exercise library</strong>. No clutter, no impossible moves. Just a seamless, high-performance workout tailored strictly to the tools you have in hand.
                 </p>
-                <ul class="space-y-6">
-                    <li class="flex items-start gap-4 group">
-                        <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 mt-1">
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 mt-1 shrink-0">
                             <i class="fa-solid fa-check text-sm"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-lg">Expert Designed</h4>
-                            <p class="text-sm text-gray-500">Tailor workouts to your specific goals and schedule.</p>
+                            <h4 class="font-bold text-white text-lg">Unmatched Variety</h4>
+                            <p class="text-sm text-gray-500">Access one of the largest fitness databases in the world, filtered to show ONLY what you can perform right now.</p>
                         </div>
-                    </li>
-                    <li class="flex items-start gap-4 group">
-                        <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 mt-1">
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 rounded-full bg-blue-500/20 flex items-center justify-center text-blue-400 mt-1 shrink-0">
                             <i class="fa-solid fa-check text-sm"></i>
                         </div>
                         <div>
-                            <h4 class="font-bold text-white text-lg">Smartwatch Sync</h4>
-                            <p class="text-sm text-gray-500">Track metrics like heart rate directly from your wrist.</p>
+                            <h4 class="font-bold text-white text-lg">Workout Anywhere</h4>
+                            <p class="text-sm text-gray-500">From a fully stocked commercial gym to a minimalist home setup.</p>
                         </div>
-                    </li>
-                </ul>
+                    </div>
+                </div>
             </div>
 
-            <!-- UI Card Side -->
+            <!-- Image Side -->
             <div class="relative" data-aos="fade-up" data-aos-delay="100">
                 <div class="absolute -right-10 -top-10 w-40 h-40 bg-blue-500/20 rounded-full blur-[60px]"></div>
                 
-                <div class="bg-[#15151e] border border-gray-800 rounded-3xl p-6 shadow-2xl relative overflow-hidden">
-                    <div class="flex items-center justify-between mb-6">
-                        <h3 class="font-bold text-lg text-white">Workouts</h3>
-                        <span class="text-blue-400 text-xs font-bold cursor-pointer">SEE ALL</span>
-                    </div>
-
-                    <div class="space-y-4">
-                        <!-- Card 1 -->
-                        <div class="h-32 rounded-2xl bg-gradient-to-r from-blue-500 to-blue-400 p-4 relative overflow-hidden flex items-end">
-                            <div class="absolute right-0 bottom-0 w-32 h-32 opacity-20"><i class="fa-solid fa-dumbbell text-8xl text-black"></i></div>
-                            <div>
-                                <div class="text-xl font-black italic uppercase">FULL BODY</div>
-                                <div class="text-xl font-black italic uppercase">STRENGTH</div>
-                            </div>
-                            <div class="absolute right-4 bottom-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm"><i class="fa-solid fa-chevron-right text-white text-xs"></i></div>
-                        </div>
-
-                        <!-- Card 2 -->
-                        <div class="h-32 rounded-2xl bg-gradient-to-r from-orange-500 to-red-400 p-4 relative overflow-hidden flex items-end">
-                            <div class="absolute right-0 bottom-0 w-32 h-32 opacity-20"><i class="fa-solid fa-person-running text-8xl text-black"></i></div>
-                            <div>
-                                <div class="text-xl font-black italic uppercase">HIGH INTENSITY</div>
-                                <div class="text-xl font-black italic uppercase">CARDIO</div>
-                            </div>
-                            <div class="absolute right-4 bottom-4 w-8 h-8 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm"><i class="fa-solid fa-chevron-right text-white text-xs"></i></div>
-                        </div>
-                    </div>
+                <div class="static-phone max-w-[320px] mx-auto">
+                    <!-- Placeholder for Equipment Selection Screen -->
+                    <!-- REPLACE 'your-equipment-screenshot-url.png' below with your uploaded image URL -->
+                    <img src="./assets/equipment_screen.png" 
+                         alt="Exact Equipment Selection UI" 
+                         class="w-full h-full object-cover"
+                         onerror="this.src='https://placehold.co/400x850/15151e/ffffff?text=Equipment+Selector+UI'"
+                    >
                 </div>
             </div>
         </div>
@@ -406,6 +488,46 @@
             }
             lastScroll = currentScroll;
         });
+
+        // --- SCROLLYTELLING LOGIC ---
+        const featureSection = document.getElementById('features');
+        const phoneImage = document.getElementById('phone-scroll-image');
+        // Get the container (parent) to know how tall the viewing area is
+        const phoneScreenContainer = phoneImage ? phoneImage.parentElement : null;
+
+        if (featureSection && phoneImage && phoneScreenContainer) {
+            window.addEventListener('scroll', () => {
+                const sectionTop = featureSection.offsetTop;
+                const sectionHeight = featureSection.offsetHeight;
+                const scrollY = window.scrollY;
+                const windowHeight = window.innerHeight;
+
+                // Calculate how far we are into the section (0 to 1)
+                const start = sectionTop;
+                const end = sectionTop + sectionHeight - windowHeight;
+                
+                let progress = (scrollY - start) / (end - start);
+                
+                // Clamp progress between 0 and 1
+                progress = Math.max(0, Math.min(1, progress));
+
+                // Dynamic Translation Calculation
+                // 1. Get the full height of the long image
+                const imageHeight = phoneImage.offsetHeight;
+                // 2. Get the height of the visible window (the phone screen)
+                const viewportHeight = phoneScreenContainer.offsetHeight;
+                
+                // 3. The maximum amount we need to slide up is the difference
+                //    This ensures the bottom of the image touches the bottom of the phone at 100% progress
+                const maxTranslate = imageHeight - viewportHeight;
+
+                // 4. Apply translation in pixels
+                // If image is shorter than container, don't move it.
+                if (maxTranslate > 0) {
+                    phoneImage.style.transform = `translateY(-${progress * maxTranslate}px)`;
+                }
+            });
+        }
     </script>
 </body>
 </html>
